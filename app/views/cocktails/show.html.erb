@@ -1,0 +1,79 @@
+<% if @cocktail.photo? %>
+<% photo_cocktail = cl_image_path @cocktail.photo, crop: :fill %>
+<% else %>
+<% photo_cocktail = image_path('not_available.jpg') %>
+<% end %>
+<div class="banner" style="background-image: url('<%= photo_cocktail %>'); "></div>
+<div class="show_container">
+  <div class="cocktail-block">
+    <div class="rectangle-show"></div>
+    <div class="info-black-rectangle">
+
+      <h3 class="title-cocktail"><%= @cocktail.name %></h3>
+      <%= render 'reviews/rating_average', cocktail: @cocktail %>
+    </div>
+
+    <div class="doses-container">
+      <h3 class="show_h3">Ingredients</h3>
+
+      <% if @cocktail.doses.empty? %>
+      <div id="empty">No ingredients yet</div>
+      <% else %>
+      <% @cocktail.doses.each do |dose| %>
+      <div class="flex-ingredients">
+        <div class="flex-ingredient-left">
+          <%= dose.description %> of <%= dose.ingredient.name %>
+        </div>
+
+        <div class="flex-ingredient-right">
+          <%= link_to dose_path(dose.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="far fa-trash-alt"></i>
+          <% end %>
+        </div>
+        
+      </div>
+      <% end %>
+      <% end %>
+
+      <br>
+      <div class="form-doses">
+        <%= render 'doses/new' %>
+      </div> 
+
+    </div>
+    <div class="comments-container">
+     
+      <h3 class="show_h3">Comments</h3>
+      <div class="reviews_bloc">
+        <div id="reviews">
+          <% if @cocktail.reviews.empty? %>
+          <div id="empty">No comments yet</div>
+          <% else %>
+              <%= render "reviews", cocktail: @cocktail, review: @review  %>
+
+          <% end %>
+        </div>
+
+
+        <div id="form">
+          <%= render 'reviews/form_review', cocktail: @cocktail, review: @review %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+  <h4>
+    <%= link_to cocktails_path  do %> 
+    <div class="back"> 
+      <i class="fas fa-chevron-left"></i>
+      <p>Back to the list</p>
+    </div>
+    <% end %> 
+  </h4>
+</div>
+</div>
+
+
+

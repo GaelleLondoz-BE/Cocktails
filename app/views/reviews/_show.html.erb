@@ -1,0 +1,25 @@
+<div class="single_review">
+<p> 
+  <% solid_star =  icon('fas', 'star') %>
+  <% regular_star =  icon('far', 'star') %>
+  <% rating = review.rating %>
+  <% if rating == 0 %>
+    <% for i in 1..5 do %>
+      <%= regular_star %>
+    <% end %>
+  <% else  %>
+    <% x = 1 %>
+    <% while x <= rating %>
+    <%= solid_star %>
+    <%  x += 1 %>
+    <% end %>
+    <% empty_star = (5 - rating) %>
+    <% for b in 1..empty_star do %>
+      <%= regular_star %>
+    <% end %>
+  <% end %>       
+</p>
+
+<p><%= review.content %></p>
+
+</div>

@@ -1,0 +1,27 @@
+.add {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index:500;
+
+
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    background: $green;
+    color: white;
+    font-weight: lighter;
+    font-size: 49px;
+    border-radius: 50%;
+
+    &:hover {
+      text-decoration:none;
+    }
+
+  }
+}

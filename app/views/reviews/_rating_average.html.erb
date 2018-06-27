@@ -1,0 +1,20 @@
+<div id="review_average" class="average-cocktail"> 
+  <% solid_star =  icon('fas', 'star') %>
+  <% regular_star =  icon('far', 'star') %>
+  <% average = @cocktail.average %>
+  <% if average == 0 %>
+    <% for i in 1..5 do %>
+      <%= regular_star %>
+    <% end %>
+  <% else  %>
+    <% x = 1 %>
+    <% while x <= average %>
+    <%= solid_star %>
+    <%  x += 1 %>
+    <% end %>
+    <% empty_star = (5 - average) %>
+    <% for b in 1..empty_star do %>
+      <%= regular_star %>
+    <% end %>
+  <% end %> 
+</div>

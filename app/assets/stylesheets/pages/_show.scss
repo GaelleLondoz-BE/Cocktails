@@ -1,0 +1,180 @@
+.banner{
+  height: 58vh;
+  margin-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+
+.show_container {
+
+ width: 900px;
+ margin: auto;
+ background-color: #ffffff;
+ box-shadow: 0.6px 6px 12.6px 1.4px rgba(38, 38, 38, 0.15);
+ position: absolute;
+ z-index: 3;
+ top: calc(86vh - 220px);
+ left: calc(50vw - 450px);
+ padding-bottom: 38px;
+ margin-bottom: 40px;
+}
+
+
+.cocktail-block{
+  display: flex;
+  flex-direction: column;
+  .rectangle-show{
+    border-bottom: 14vh solid #333333;
+    border-right: 0vw solid transparent;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .info-black-rectangle {
+    display: flex;
+    position: absolute;
+    /* height: 50px; */
+    height: 13vh;
+    /* top: 23px; */
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  .average-cocktail {
+    .svg-inline--fa.fa-w-18 {
+      width: 15px;
+      float: left;
+      margin-top: 7px;
+      color: #ffffff;
+    }
+  }
+  .doses-container {
+    height: 37vh;
+  }
+
+  h3.show_h3 {
+    margin-top: 0;
+    color: #6cd0c6;
+    font-weight: bold;
+    font-size: 27px;
+    font-family: 'Comfortaa', cursive;
+  }
+  h3.title-cocktail {
+    /* position: absolute; */
+    color: #ffffff;
+    top: 13px;
+    margin: 0;
+    /* margin-left: 15px; */
+    text-transform: uppercase;
+    font-size: 41px;
+  }
+
+  .form-doses {
+    width: 365px;
+    background: #ffffff;
+    padding: 36px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    box-shadow: 0.6px 6px 12.6px 1.4px rgba(38, 38, 38, 0.15);
+  }
+
+  select#dose_ingredient_id {
+    height: 35px;
+  }
+
+  h4.title-form-doses {
+    margin-top: 0;
+    color: #6cd0c6;
+    font-weight: bold;
+    font-size: 27px;
+    font-family: 'Comfortaa', cursive;
+  }
+
+  label {
+    font-weight: normal; 
+  }
+  .submit-doses{
+    background-color: #6CCFC5;
+    color: #fff;
+    margin-right: 17px;
+    padding: 20px 39px;
+  }
+
+  .doses-container {
+   margin: 15px 0 0 15px;
+ }
+
+ .flex-ingredients {
+
+  display: flex;
+  justify-content: space-between;
+  width: 23vw;
+}
+
+
+.single_review {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+
+  p {
+    color: #333;
+    margin: 0;
+  }
+
+  svg.svg-inline--fa.fa-star.fa-w-18 {
+    color: #333;
+  }
+}
+
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
+  color: #333;
+}
+.comments-container {
+  width: 500px;
+  margin-left: 15px;
+    /* margin: 0 118px; */
+  }
+
+  input.btn.btn.button-grey {
+    background-color: #6CCFC5;
+    color: #fff;
+    margin-right: 17px;
+    padding: 20px 39px;
+  }
+
+
+}
+
+h4 a{
+  text-decoration:none;
+  &:hover{
+    text-decoration:none;
+  }
+}
+.back {
+  display: flex;
+  justify-content: left;
+  margin-left: 15px;
+  color: #333;
+  font-size: 15px;
+  align-items: center;
+
+  p{
+    margin: 0;
+    line-height: 1px;
+    margin-left: 11px;
+
+  }
+
+  &:hover{
+    color:$green;
+
+    text-decoration:none;}
+  }

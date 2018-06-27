@@ -1,0 +1,323 @@
+form#new_cocktail {
+    /* position: absolute; */
+    margin-top: 0px;
+
+
+    .form-inputs {
+      margin-bottom: 22px;
+      width: 28vw;
+    }
+
+    .button-submit {
+      color: #333;
+    /* background: #eee; */
+    border: solid 1px #eee;
+    padding: 10px 20px;
+    border-radius: 0px;
+  }
+
+  input#cocktail_photo {
+    display: flex;
+    text-align: center;
+  }
+}
+
+
+
+abbr[title], abbr[data-original-title] {
+    /* cursor: help; */
+    border-bottom: none;
+    text-decoration: none;
+  }
+  .background-form{
+    .flex-forms {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+      .forms {
+        background-color: $white;
+        padding: 51px;
+        box-shadow: 1px 8px 50px 1px rgba(0, 0, 0, 0.12);
+        z-index: 3;
+        h2{
+          border-left: none;
+          padding: 15px 0px;
+          color: $dark-gray;
+          text-align: center;
+          font-size: 32px;
+          width: 100%;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        .form-control {
+          display: block;
+          width: 100%;
+          height: 39px;
+          padding: 6px 12px;
+          font-size: 18px;
+          line-height: 1.428571429;
+          color: $dark-gray;
+          background-color: $white;
+          background-image: none;
+          border: 1px solid $lighter-gray;
+          border-radius: 0px;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+        .form-group{
+          margin-bottom: 0px !important;
+        }
+
+        .flex-remember-me{
+          display:flex;     
+          align-items: center;
+          margin: 15px 0;
+        }
+
+        #user_remember_me{display:none}
+        .checkmark {
+          height: 20px;
+          width: 20px;
+          margin-right:10px;
+          background-color: $lighter-gray;
+          border: 5px solid $lighter-gray;
+        }
+
+        .focs{
+          background: url(check.svg);
+          border: 5px solid $green;
+          background-color: $green;
+        }
+
+        .form-check {
+          position: relative;
+          display: block;
+          padding-left: 0;
+        }
+
+        .form-check-label {
+          margin-bottom: 0;
+          padding: 0px;
+          margin: 0px;
+        }
+
+        label {
+          display: inline-block;
+          max-width: 100%;
+          margin: 12px 0px;
+          font-weight: normal;
+        }
+
+        a {
+          color: $dark-gray;
+          text-decoration: none;
+        }
+        
+        input.btn {
+          background-color: $green;
+          color: $white;
+          margin-right: 17px;
+          padding: 20px 63px;
+        }
+
+        .form-actions {
+          display: flex;
+          margin-bottom: 13px;
+          button {
+            background-color: $lighter-gray;
+            color: $dark-gray;
+            text-decoration: none;
+            padding: 20px 63px;
+            border: none;
+
+            a{
+              color: $dark-gray;
+              text-decoration: none;
+            }
+          }
+        }   
+      }
+    }
+  }
+  div.rectangle {
+    border-bottom: 34vh solid #333333;
+    border-right: 0vw solid transparent;
+    height: 0;
+    position: fixed;
+    left: 0;
+    top:0px;
+    z-index: 0;
+    width: 100vw;
+  }
+
+
+  input.button-green {
+    background-color: #6CCFC5;
+    color: #fff;
+    margin-right: 17px;
+    padding: 20px 39px;
+  }
+  @media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px) {
+    div#rectangle {
+      border-bottom: 34vh solid $green;
+      border-right: 0vw solid transparent;
+      width: 100vw;
+    }
+
+    form#new_cocktail .form-inputs {
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .cocktail-block .doses-container {
+      height: 21vh;
+    }
+
+    .cocktail-block {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: -187px;
+    }
+
+
+    .show_container {
+      width: 100% !important;
+      top: calc(86vh - 161px) !important;
+      left: 0 !important;
+
+    }
+  }
+
+
+  @media only screen
+  and (min-width: 481px)
+  and (max-width: 767px) {
+    div#rectangle {
+      border-bottom: 34vh solid $green;
+      border-right: 0vw solid transparent;
+      width: 100vw;
+    }
+
+  .cocktail-block .flex-ingredients {
+    display: flex;
+    justify-content: space-between;
+    width: 88vw !important;
+}
+
+.cocktail-block .form-doses {
+    width: 365px;
+    background: #ffffff;
+    padding: 0 !important;
+    right: 20px;
+    top: 15px;
+    box-shadow: none !important;
+    position: unset !important;
+
+}
+
+
+
+.cocktail-block .comments-container {
+    width: 93% !important;
+    margin-left: 15px;
+    /* margin: 0 118px; */
+    margin-top: 157px !important;
+}
+    form#new_cocktail .form-inputs {
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .show_container {
+      width: 100% !important;
+      box-shadow: none;
+      position: absolute;
+    /* z-index: 3; */
+    top: 0;
+    left: 0 !important;
+    padding-bottom: 38px; 
+    margin-bottom: 40px; 
+  }
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px)
+{
+
+  .cocktail-block .flex-ingredients {
+    display: flex;
+    justify-content: space-between;
+    width: 88vw !important;
+}
+
+
+.cocktail-block .comments-container {
+    width: 93% !important;
+    margin-left: 15px;
+    /* margin: 0 118px; */
+    margin-top: 157px !important;
+}
+
+
+.cocktail-block .form-doses {
+    width: 365px;
+    background: #ffffff;
+    padding: 0 !important;
+    right: 20px;
+    top: 15px;
+    box-shadow: none !important;
+    position: unset !important;
+
+}
+
+  .show_container {
+    width: 100% !important;
+    /* margin: auto; */
+    /* background-color: #ffffff; */
+    /* box-shadow: 0.6px 6px 12.6px 1.4px rgba(38, 38, 38, 0.15); */
+    position: absolute !important;
+    /* z-index: 3; */
+    /* top: calc(86vh - 220px); */
+   left: 0 !important;
+    /* padding-bottom: 38px; */
+    /* margin-bottom: 40px; */
+  }
+
+ 
+
+  .background-form .flex-forms .forms {
+    background-color: $white;
+    padding: 26px;
+    box-shadow: 1px 8px 50px 1px rgba(0, 0, 0, 0.12);
+    width: 90vw;
+    z-index: 3;
+  }
+  div#rectangle {
+    border-bottom: 34vh solid $green;
+    border-right: 0vw solid transparent;
+    width: 100vw;
+  }
+
+  .background-form .flex-forms .forms input.btn{
+    padding: 18px 32px;
+  }
+
+  .background-form .flex-forms .forms .form-actions button{
+    padding: 18px 32px;
+  }
+
+  form#new_cocktail .form-inputs {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+}
+
+

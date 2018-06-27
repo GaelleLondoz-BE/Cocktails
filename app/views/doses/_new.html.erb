@@ -1,0 +1,8 @@
+<h4 class="title-form-doses">Create a new dose</h4>
+<div class="container-doses">
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.submit 'Submit', class: "submit-doses" %>
+<% end %>
+</div>
