@@ -10,7 +10,9 @@
     <div class="info-black-rectangle">
 
       <h3 class="title-cocktail"><%= @cocktail.name %></h3>
-      <%= render 'reviews/rating_average', cocktail: @cocktail %>
+      <% if Cocktail.find(@cocktail.id).reviews.count > 0 %>
+        <%= render 'reviews/rating_average', cocktail: @cocktail %>
+      <% end %>
     </div>
 
     <div class="doses-container">
@@ -26,7 +28,7 @@
         </div>
 
         <div class="flex-ingredient-right">
-          <%= link_to dose_path(dose.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= link_to dose_path(dose.id), method: :delete do %>
           <i class="far fa-trash-alt"></i>
           <% end %>
         </div>

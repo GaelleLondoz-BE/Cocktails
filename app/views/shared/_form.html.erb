@@ -4,27 +4,26 @@
     <div class="forms">
       <h2>New cocktail</h2>
 
-        <%= simple_form_for(@cocktail) do |f| %>
-          <%= f.error_notification %>
-          <div class="form-inputs">
-            <%= f.input :name, required: true %>
+      <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :name, required: true %>
+        <div class="custom-file">
+            <%= f.input :photo, required: true, name: 'picture',  input_html: { class: "custom-file-input", id: "validatedCustomFile" }%>
+            <label class="custom-file-label" for="validatedCustomFile">Add a picture</label>
+  
+
+
+  </div>
 
 
 
-            <label class="button-submit">
-  Add a picture
-  <span style="display:none;">
-    <%= f.input :photo, required: true, name: 'picture' %>
-  </span>
-</label>
-
-
-            <%= f.input :photo_cache, as: :hidden %> 
-          </div>
-          <div class="form-actions">
-            <%= f.submit 'Create', { class: 'button-green' } %> 
-          </div>
-        <% end %>
+        <%= f.input :photo_cache, as: :hidden %> 
+      </div>
+      <div class="form-actions">
+        <%= f.submit 'Create', { class: 'button-green' } %> 
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

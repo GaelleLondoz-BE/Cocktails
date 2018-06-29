@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :update, :destroy]
   def index
+    @cocktails_i_made = current_user.cocktails
     @cocktails = Cocktail.all
     @cocktail = Cocktail.new
 

@@ -3,11 +3,17 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def after_sign_in_path_for(resource_or_scope)
-    cocktails_path
+    @cocktails_i_made = current_user.cocktails
+    if @cocktails_i_made.count > 0
+      cocktails_path
+    else
+      new_cocktail_path
+    end
+    
   end
 
   def after_sign_up_path_for(resource_or_scope)
-    cocktails_path
+     new_cocktail_path
   end
 
   def after_sign_out_path_for(resource_or_scope)

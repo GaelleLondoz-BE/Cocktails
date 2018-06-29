@@ -2,56 +2,65 @@
 <div class="add"><%= link_to "+", new_cocktail_path %></div>
 <div class="container-cards">
   <div class="cards">
-    <% @cocktails.each do |cocktail| %>
+    <% if @cocktails_i_made.count > 0 %>
+      <% @cocktails_i_made.each do |cocktail| %>
 
-        <% if cocktail.photo? %>
-          <% my_photo_url = cl_image_path cocktail.photo, height: 250, width: 250, crop: :fill %>
-        <% else %>
-          <% my_photo_url = image_path('not-available.jpg') %>
+          <% if cocktail.photo? %>
+            <% my_photo_url = cl_image_path cocktail.photo, height: 250, width: 250, crop: :fill %>
+          <% else %>
+            <% my_photo_url = image_path('not-available.jpg') %>
+          <% end %>
+   
+          <div class="flex-card">
+            <div class="link"></div>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= my_photo_url %>')">
+            </div>
+            <div class="info">
+              <div class="flex-left">
+                <div class="card-description">
+                  <h2><%= link_to cocktail.name, cocktail_path(cocktail.id)%></h2>
+                  <% if Cocktail.find(cocktail.id).reviews.count > 0 %>
+                    <% solid_star =  icon('fas', 'star') %>
+                    <% regular_star =  icon('far', 'star') %>
+            
+                    <% average = Cocktail.find(cocktail.id).average %>
+
+                    <% if average == 0 %>
+                      <% for i in 1..5 do %>
+                        <%= regular_star %>
+                      <% end %>
+                    <% else  %>
+                      <% x = 1 %>
+                      <% while x <= average %>
+                      <%= solid_star %>
+                      <%  x += 1 %>
+                      <% end %>
+                      <% empty_star = (5 - average) %>
+                      <% for b in 1..empty_star do %>
+                        <%= regular_star %>
+                      <% end %>
+                    <% end %>
+                    <% end %>
+                    <div class="clear"></div>
+                </div>
+
+              </div>
+              
+              <div class="flex-right">
+                <div class="delete_cocktail">
+                  <%= link_to cocktail_path(cocktail.id), method: :delete do %><i class="far fa-trash-alt"></i><% end %>
+                </div>
+              </div>
+            </div>
+                   <%= link_to "", cocktail_path(cocktail.id), class: "card-link" %>
+          </div>
         <% end %>
- 
-        <div class="flex-card">
-          <div class="link"></div>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= my_photo_url %>')">
-          </div>
-          <div class="info">
-            <div class="flex-left">
-              <div class="card-description">
-                <h2><%= link_to cocktail.name, cocktail_path(cocktail.id)%></h2>
-
-                <% solid_star =  icon('fas', 'star') %>
-                <% regular_star =  icon('far', 'star') %>
-        
-
-                <% average = Cocktail.find(cocktail.id).average %>
-
-                <% if average == 0 %>
-                  <% for i in 1..5 do %>
-                    <%= regular_star %>
-                  <% end %>
-                <% else  %>
-                  <% x = 1 %>
-                  <% while x <= average %>
-                  <%= solid_star %>
-                  <%  x += 1 %>
-                  <% end %>
-                  <% empty_star = (5 - average) %>
-                  <% for b in 1..empty_star do %>
-                    <%= regular_star %>
-                  <% end %>
-                <% end %>
-              <div class="clear"></div>
-              </div>
-            </div>
-            <div class="flex-right">
-              <div class="delete_cocktail">
-                <%= link_to cocktail_path(cocktail.id), method: :delete, data: { confirm: 'Are you sure?' } do %><i class="far fa-trash-alt"></i><% end %>
-              </div>
-            </div>
-          </div>
-                 <%= link_to "", cocktail_path(cocktail.id), class: "card-link" %>
-        </div>
+      <% else %>
+      <div class="no-cocktail">
+        <%= image_tag "logo.svg", height: 50 %>
+        <p>No cocktail left in your, let's add some</p>
+      </div>
       <% end %>
+    </div>
   </div>
-</div>
 

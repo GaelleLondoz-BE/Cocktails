@@ -1,7 +1,20 @@
 form#new_cocktail {
     /* position: absolute; */
     margin-top: 0px;
+    .custom-file-label::after {
+      display: none !important;
+    }
 
+    label.custom-file-label {
+      width: 157px;
+      height: 52px;
+      color: #333;
+      border: solid 1px #eee;
+      padding: 12px 0px;
+      border-radius: 0px;
+      text-align: center;
+      border-radius: 0;
+    }
 
     .form-inputs {
       margin-bottom: 22px;
@@ -205,40 +218,40 @@ abbr[title], abbr[data-original-title] {
       width: 100vw;
     }
 
-  .cocktail-block .flex-ingredients {
-    display: flex;
-    justify-content: space-between;
-    width: 88vw !important;
-}
-
-.cocktail-block .form-doses {
-    width: 365px;
-    background: #ffffff;
-    padding: 0 !important;
-    right: 20px;
-    top: 15px;
-    box-shadow: none !important;
-    position: unset !important;
-
-}
-
-
-
-.cocktail-block .comments-container {
-    width: 93% !important;
-    margin-left: 15px;
-    /* margin: 0 118px; */
-    margin-top: 157px !important;
-}
-    form#new_cocktail .form-inputs {
-      margin-bottom: 22px;
-      width: 100%;
+    .cocktail-block .flex-ingredients {
+      display: flex;
+      justify-content: space-between;
+      width: 88vw !important;
     }
 
-    .show_container {
-      width: 100% !important;
-      box-shadow: none;
-      position: absolute;
+    .cocktail-block .form-doses {
+      width: 365px;
+      background: #ffffff;
+      padding: 0 !important;
+      right: 20px;
+      top: 15px;
+      box-shadow: none !important;
+      position: unset !important;
+
+    }
+
+
+
+    .cocktail-block .comments-container {
+      width: 93% !important;
+      margin-left: 15px;
+    /* margin: 0 118px; */
+    margin-top: 157px !important;
+  }
+  form#new_cocktail .form-inputs {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+
+  .show_container {
+    width: 100% !important;
+    box-shadow: none;
+    position: absolute;
     /* z-index: 3; */
     top: 0;
     left: 0 !important;
@@ -256,18 +269,18 @@ and (max-width: 480px)
     display: flex;
     justify-content: space-between;
     width: 88vw !important;
-}
+  }
 
 
-.cocktail-block .comments-container {
+  .cocktail-block .comments-container {
     width: 93% !important;
     margin-left: 15px;
     /* margin: 0 118px; */
     margin-top: 157px !important;
-}
+  }
 
 
-.cocktail-block .form-doses {
+  .cocktail-block .form-doses {
     width: 365px;
     background: #ffffff;
     padding: 0 !important;
@@ -276,7 +289,7 @@ and (max-width: 480px)
     box-shadow: none !important;
     position: unset !important;
 
-}
+  }
 
   .show_container {
     width: 100% !important;
@@ -286,12 +299,12 @@ and (max-width: 480px)
     position: absolute !important;
     /* z-index: 3; */
     /* top: calc(86vh - 220px); */
-   left: 0 !important;
+    left: 0 !important;
     /* padding-bottom: 38px; */
     /* margin-bottom: 40px; */
   }
 
- 
+  
 
   .background-form .flex-forms .forms {
     background-color: $white;
@@ -318,6 +331,9 @@ and (max-width: 480px)
     margin-bottom: 22px;
     width: 100%;
   }
+
+
 }
+
 
 

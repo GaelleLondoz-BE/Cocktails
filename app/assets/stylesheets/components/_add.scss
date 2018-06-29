@@ -11,7 +11,7 @@
     align-items: center;
     width: 75px;
     height: 75px;
-    padding: 0;
+    padding-bottom: 9px;
     margin: 0;
     background: $green;
     color: white;
@@ -21,6 +21,8 @@
 
     &:hover {
       text-decoration:none;
+      color:white;
+      background: #59a9a1
     }
 
   }
