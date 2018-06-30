@@ -25,6 +25,7 @@
 .cocktail-block{
   display: flex;
   flex-direction: column;
+  top:0;
   .rectangle-show{
     border-bottom: 14vh solid #333333;
     border-right: 0vw solid transparent;
@@ -51,9 +52,7 @@
       color: #ffffff;
     }
   }
-  .doses-container {
-    height: 37vh;
-  }
+
 
   h3.show_h3 {
     margin-top: 0;
@@ -79,6 +78,7 @@
     position: absolute;
     right: 20px;
     top: 15px;
+
     box-shadow: 0.6px 6px 12.6px 1.4px rgba(38, 38, 38, 0.15);
   }
 
@@ -102,10 +102,20 @@
     color: #fff;
     margin-right: 17px;
     padding: 20px 39px;
+    border:none;
+
+transition-duration: 0.15s;
+        &:hover {
+ 
+      color:white;
+      background: #59a9a1
+    }
   }
 
   .doses-container {
    margin: 15px 0 0 15px;
+   width: 92%;
+       min-height: 266px;
  }
 
  .flex-ingredients {
@@ -135,6 +145,11 @@
 
 svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
   color: #333;
+  transition-duration: 0.15s;
+
+   &:hover{
+      color: $green;
+    }
 }
 .comments-container {
   width: 500px;
@@ -147,6 +162,15 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
     color: #fff;
     margin-right: 17px;
     padding: 20px 39px;
+    border:none;
+    border-radius:0;
+    transition-duration: 0.15s;
+
+        &:hover {
+
+      color:white;
+      background: #59a9a1
+    }
   }
 
 
@@ -165,16 +189,95 @@ h4 a{
   color: #333;
   font-size: 15px;
   align-items: center;
+  transition-duration: 0.15s;
 
   p{
     margin: 0;
     line-height: 1px;
     margin-left: 11px;
 
+
   }
 
   &:hover{
+
     color:$green;
 
     text-decoration:none;}
   }
+
+
+
+
+  @media only screen
+  and (min-width: 320px)
+
+  and (max-width: 480px){
+    .cards {
+      box-shadow: none;
+    }
+
+    .cocktail-block .form-doses {
+      width: 100%;}
+
+
+      .show_container {box-shadow: none;}
+
+
+
+      .form-doses {
+
+        width: 100%;
+      }
+
+    }
+
+    @media only screen and (max-width: 1023px) and (min-width: 768px){
+    .cocktail-block {
+
+      position: relative;
+      top: -60px; }
+
+      
+
+    }
+
+     @media only screen and (max-width: 767px) and (min-width: 320px){
+      .form-doses {width:100% !important;}}
+
+    @media only screen
+    and (min-device-width: 320px)
+
+    and (max-device-width: 1024px){
+      .flex-card {
+        &:hover{
+          transform: scale(1);
+        }
+      }
+
+      
+
+    }
+
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .cocktail-block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -187px;
+}
+}
+
+
+
+    @media only screen
+    and (min-device-width: 768px)
+
+    and (max-device-width: 1024px){
+      .show_container {box-shadow: none;}
+
+    }

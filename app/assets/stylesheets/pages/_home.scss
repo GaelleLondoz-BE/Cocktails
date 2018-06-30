@@ -1,7 +1,6 @@
 body, .btn{
   font-size: 18px !important;
 }
-
 .container-home {
   background-size: cover;
   position: fixed;
@@ -14,32 +13,40 @@ body, .btn{
     align-content: center;
     margin-left: 25px;
     width: 30%;
-    .title_app {
-      color: $dark-gray;
-      font-weight: bold;
-      font-size: 57px;
-      margin: 0 0 21px 0;
-      line-height: 1;
-      text-transform: uppercase;
+    .align-items {
       z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      .title_app {
+        color: $dark-gray;
+        font-weight: bold;
+        font-size: 57px;
+        box-sizing: content-box;
+        margin: 0 0 11px 0;
+        line-height: 1;
+        text-transform: uppercase;
+        z-index: 2;
+      }
     }
   }
-  .flex {
-    z-index: 2;
-    a.links {
-      border: 2px solid $dark-gray;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 15px 30px;
 
-      color: $dark-gray;
-      transition: background-color 0.5s ease;
-      &:hover{
-        border: 2px solid $dark-gray;
-        color: #fff;
-        background: $dark-gray;
-        text-decoration: none;
-      }
+  a.links {
+    border: 2px solid $dark-gray;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    width: 134px;
+    padding: 15px 30px;
+    color: $dark-gray;
+    transition: background-color 0.5s ease;
+
+    &:hover{
+      border: 2px solid $dark-gray;
+      color: $white;
+      background: $dark-gray;
+      text-decoration: none;
     }
   }
 }
@@ -69,7 +76,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media only screen
 and (min-width: 481px)
 and (max-width: 767px) {
-    #trapezoid { width: 91vw;}
+  #trapezoid { width: 91vw;}
 }
 
 @media only screen
@@ -83,7 +90,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .container-home .flex_content {
-      width: 49%;
+    width: 49%;
   }
 
 }

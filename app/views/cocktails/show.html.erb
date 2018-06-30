@@ -1,8 +1,6 @@
-<% if @cocktail.photo? %>
+
 <% photo_cocktail = cl_image_path @cocktail.photo, crop: :fill %>
-<% else %>
-<% photo_cocktail = image_path('not_available.jpg') %>
-<% end %>
+
 <div class="banner" style="background-image: url('<%= photo_cocktail %>'); "></div>
 <div class="show_container">
   <div class="cocktail-block">

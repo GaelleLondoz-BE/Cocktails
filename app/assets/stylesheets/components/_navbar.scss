@@ -4,20 +4,22 @@
   background: white;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 40px;
+  padding: 0px 20px !important;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed !important;
-  width: 100vw;
   top: 0;
   z-index: 5;
-    flex-wrap: unset !important;
+  flex-wrap: unset !important;
+  border-radius: 0 !important;
+  width: 100vw;
+  position: fixed !important;
 }
 
 
   .navbar-brand {
-    float: none;
+    float: none ;
     padding: 0;
     width:100vw
 

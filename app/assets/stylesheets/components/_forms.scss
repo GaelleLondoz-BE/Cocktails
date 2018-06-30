@@ -14,7 +14,14 @@ form#new_cocktail {
       border-radius: 0px;
       text-align: center;
       border-radius: 0;
+
+    transition: background-color 0.5s ease;
+
+    &:hover{
+      background-color: $dark-gray; color: $light-gray
     }
+    }
+
 
     .form-inputs {
       margin-bottom: 22px;
@@ -39,8 +46,7 @@ form#new_cocktail {
 
 abbr[title], abbr[data-original-title] {
     /* cursor: help; */
-    border-bottom: none;
-    text-decoration: none;
+display:none;
   }
   .background-form{
     .flex-forms {
@@ -135,6 +141,12 @@ abbr[title], abbr[data-original-title] {
           color: $white;
           margin-right: 17px;
           padding: 20px 63px;
+          border-radius: 0;
+          transition-duration: 0.15s;
+    &:hover {
+
+      background: #59a9a1
+    }
         }
 
         .form-actions {
@@ -144,12 +156,22 @@ abbr[title], abbr[data-original-title] {
             background-color: $lighter-gray;
             color: $dark-gray;
             text-decoration: none;
-            padding: 20px 63px;
+            
             border: none;
+            transition-duration: 0.15s;
 
             a{
               color: $dark-gray;
               text-decoration: none;
+              padding: 20px 58px;
+        
+            }
+
+
+            &:hover {
+
+
+              background: #cacaca;
             }
           }
         }   
@@ -173,6 +195,14 @@ abbr[title], abbr[data-original-title] {
     color: #fff;
     margin-right: 17px;
     padding: 20px 39px;
+    border: none;
+        border-radius: 0;
+
+        transition-duration: 0.15s;
+    &:hover {
+
+      background: #59a9a1
+    }
   }
   @media only screen
   and (min-width: 768px)
@@ -238,7 +268,7 @@ abbr[title], abbr[data-original-title] {
 
 
     .cocktail-block .comments-container {
-      width: 93% !important;
+      width: 92% !important;
       margin-left: 15px;
     /* margin: 0 118px; */
     margin-top: 157px !important;
@@ -273,9 +303,8 @@ and (max-width: 480px)
 
 
   .cocktail-block .comments-container {
-    width: 93% !important;
+    width: 92% !important;
     margin-left: 15px;
-    /* margin: 0 118px; */
     margin-top: 157px !important;
   }
 
@@ -332,7 +361,7 @@ and (max-width: 480px)
     width: 100%;
   }
 
-
+  
 }
 
 
