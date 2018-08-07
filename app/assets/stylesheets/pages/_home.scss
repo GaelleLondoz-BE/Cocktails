@@ -62,7 +62,7 @@ body, .btn{
 @media only screen
 and (min-width: 768px)
 and (max-width: 1024px)
-and (-webkit-min-device-pixel-ratio: 1) {
+ {
   #trapezoid {
     border-bottom: 100vh solid white;
     border-right: 29vw solid transparent;
@@ -81,8 +81,17 @@ and (max-width: 767px) {
 
 @media only screen
 and (min-width: 320px)
-and (max-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
+and (max-width: 374px) {
+    .container-home .flex_content .align-items .title_app {
+    font-size: 50px;
+  }
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px) {
+
+
 
   #trapezoid {
     border-right: 0vw solid transparent;

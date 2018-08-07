@@ -15,11 +15,11 @@ form#new_cocktail {
       text-align: center;
       border-radius: 0;
 
-    transition: background-color 0.5s ease;
+      transition: background-color 0.5s ease;
 
-    &:hover{
-      background-color: $dark-gray; color: $light-gray
-    }
+      &:hover{
+        background-color: $dark-gray; color: $light-gray
+      }
     }
 
 
@@ -46,10 +46,11 @@ form#new_cocktail {
 
 abbr[title], abbr[data-original-title] {
     /* cursor: help; */
-display:none;
+    display:none;
   }
   .background-form{
     .flex-forms {
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,7 +93,7 @@ display:none;
         }
 
         .flex-remember-me{
-          display:flex;     
+          display:flex;
           align-items: center;
           margin: 15px 0;
         }
@@ -135,7 +136,7 @@ display:none;
           color: $dark-gray;
           text-decoration: none;
         }
-        
+
         input.btn {
           background-color: $green;
           color: $white;
@@ -143,10 +144,10 @@ display:none;
           padding: 20px 63px;
           border-radius: 0;
           transition-duration: 0.15s;
-    &:hover {
+          &:hover {
 
-      background: #59a9a1
-    }
+            background: #59a9a1
+          }
         }
 
         .form-actions {
@@ -156,7 +157,7 @@ display:none;
             background-color: $lighter-gray;
             color: $dark-gray;
             text-decoration: none;
-            
+
             border: none;
             transition-duration: 0.15s;
 
@@ -164,7 +165,7 @@ display:none;
               color: $dark-gray;
               text-decoration: none;
               padding: 20px 58px;
-        
+
             }
 
 
@@ -174,7 +175,7 @@ display:none;
               background: #cacaca;
             }
           }
-        }   
+        }
       }
     }
   }
@@ -196,9 +197,9 @@ display:none;
     margin-right: 17px;
     padding: 20px 39px;
     border: none;
-        border-radius: 0;
+    border-radius: 0;
 
-        transition-duration: 0.15s;
+    transition-duration: 0.15s;
     &:hover {
 
       background: #59a9a1
@@ -285,13 +286,57 @@ display:none;
     /* z-index: 3; */
     top: 0;
     left: 0 !important;
-    padding-bottom: 38px; 
-    margin-bottom: 40px; 
+    padding-bottom: 38px;
+    margin-bottom: 40px;
   }
 }
 
+
+
 @media only screen
 and (min-width: 320px)
+and (max-width: 374px) {
+
+.background-form .flex-forms .forms {
+
+
+box-shadow: 1px 8px 50px 1px rgba(0, 0, 0, 0); }
+
+
+.background-form .flex-forms .forms input.btn {
+padding: 20px 24px !important;
+}
+
+
+.background-form .flex-forms .forms .form-actions button a {
+
+    padding: 20px 13px !important;
+  }
+
+
+
+
+.background-form .flex-forms .forms .form-control {
+
+width: 259%}
+.custom-file {
+
+width: 153% !important;
+
+
+}
+form#new_cocktail label.custom-file-label {
+  padding: 12px 0px;
+}
+
+
+
+}
+
+
+
+@media only screen
+and (min-width: 375px)
 and (max-width: 480px)
 {
 
@@ -333,7 +378,7 @@ and (max-width: 480px)
     /* margin-bottom: 40px; */
   }
 
-  
+
 
   .background-form .flex-forms .forms {
     background-color: $white;
@@ -356,12 +401,19 @@ and (max-width: 480px)
     padding: 18px 32px;
   }
 
+  .background-form .flex-forms .forms .form-actions button a {
+
+    padding: 20px 0px !important;
+  }
+
+
+
   form#new_cocktail .form-inputs {
     margin-bottom: 22px;
     width: 100%;
   }
 
-  
+
 }
 
 
